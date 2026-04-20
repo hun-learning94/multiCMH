@@ -1,0 +1,31 @@
+{
+    "output_dir": "data/Aaa",
+    "alp": 0.05,
+    "nsim": 500,
+    "null_seed": 149,
+    "null_p": 10,
+    "null_N": [
+        50,
+        100,
+        200,
+        400,
+        800,
+        1600,
+        3200
+    ],
+    "null_n": 800,
+    "null_P": [
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128
+    ],
+    "roc_seed": 149149,
+    "run_null":true,
+    "run_roc":true,
+    "x_dsc":false,
+    "y_dsc":false
+}

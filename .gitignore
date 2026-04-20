@@ -1,0 +1,30 @@
+# Ignore any file or folder starting with a dot (.)
+.*
+
+# But don't ignore .gitignore itself
+!.gitignore
+
+# Ignore specific file extensions like .pyd
+*.pyd
+*linux*.so
+.Rproj.user
+**/__pycache__/**
+
+# Ignore simulation csv data and only store results
+data/**/*.csv
+!data/**/*times.csv
+!data/**/*pvals.csv
+
+# Build and packaging artifacts
+build/
+dist/
+*.egg-info/
+
+# ignore dcc file
+core*
+
+# Ignore the entire archive folder
+archive/
+
+# Ignore ipynb with sensitive info
+rideshare1.ipynb

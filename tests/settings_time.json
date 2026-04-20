@@ -1,0 +1,29 @@
+{
+    "output_dir": "data/Aaa_time",
+    "alp": 0.05,
+    "nsim": 30,
+    "null_seed": 149,
+    "null_p": 1,
+    "null_N": [
+        1000,
+        2000,
+        4000,
+        8000,
+        16000,
+        32000,
+        64000,
+        128000,
+        256000,
+        512000,
+        1024000
+    ],
+    "null_n": 800,
+    "null_P": [
+
+    ],
+    "roc_seed": 149149,
+    "run_null":true,
+    "run_roc":false,
+    "x_dsc":false,
+    "y_dsc":false
+}
