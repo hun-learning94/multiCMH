@@ -228,7 +228,10 @@ class multiCMH_output:
         if colnames is not None:
             Z_cols = list(colnames)
         else:
-            Z_cols = [f"Z{i+1}" for i in range(Z_mean.shape[1])]
+            if isinstance(self.Z, pd.DataFrame):
+                Z_cols = list(self.Z.columns)
+            else:
+                Z_cols = [f"Z{i+1}" for i in range(Z_mean.shape[1])]
 
         if len(Z_cols) != Z_mean.shape[1]:
             raise ValueError(

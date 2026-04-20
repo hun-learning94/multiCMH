@@ -52,13 +52,45 @@ This project depends on:
 
 For Linux, macOS, and most HPC systems, the most reliable approach is to use **micromamba** or **conda** and install all build dependencies inside one environment.
 
-Create and activate an environment:
-
 ```bash
 micromamba create -n multiCMH -c conda-forge \
   python=3.11 \
   pybind11 \
-  numpy scipy pandas matplotlib seaborn scikit-learn \
+  numpy scipy pandas matplotlib seaborn scikit-learn ipykernel \
   eigen boost-cpp \
   pip setuptools
 micromamba activate multiCMH
+pip install -e .
+```
+
+## Demos
+THe demonstration using publicly available dataset is in tests/realdata.ipynb
+
+## Optional dependencies for comparison methods
+
+The core `multiCMH` package does **not** require the comparison-method dependencies below.
+They are only needed if you want to run the benchmark scripts in:
+
+* `tests/test_others.py`
+* `tests/test_others.R`
+
+### Python comparison methods
+```bash
+pip install CCIT==0.4 
+pip install tigramite
+```
+
+### R comparison methods
+
+Open an R session and install:
+
+```r
+install.packages(c(
+  "data.table",
+  "stringr",
+  "GeneralisedCovarianceMeasure",
+  "cdcsis",
+  "weightedGCM",
+  "RCIT"
+))
+```

@@ -166,13 +166,13 @@ def plot_lines(ax, output_dir, prefix, N, P, ylab, METHODS, nsim ,color_map, alp
         'medtree_sttm_n5':'multiCMH'
     }
     
-    method_name_map = {
-        'medtree_sttm_n25':'eta25',
-        'medtree_sttm_n20':'eta20',
-        'medtree_sttm_n15':'eta15',
-        'medtree_sttm_n10':'eta10',
-        'medtree_sttm_n5':'eta5'
-    }
+    # method_name_map = {
+    #     'medtree_sttm_n25':'eta25',
+    #     'medtree_sttm_n20':'eta20',
+    #     'medtree_sttm_n15':'eta15',
+    #     'medtree_sttm_n10':'eta10',
+    #     'medtree_sttm_n5':'eta5'
+    # }
     
     """
     output_dir: Directory for output files
@@ -201,7 +201,7 @@ def plot_lines(ax, output_dir, prefix, N, P, ylab, METHODS, nsim ,color_map, alp
 
     # Setup plot
     if ylab == 'Probability of rejection':
-        ax.set_ylim(0, 0.1)
+        # ax.set_ylim(0, 0.1)
         ax.axhline(y=alpha, color='black', linestyle='dotted', linewidth=1.25)
         
     # # Custom y-axis formatter for time plots
